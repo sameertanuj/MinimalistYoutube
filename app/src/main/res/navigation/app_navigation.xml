@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/app_navigation"
+            app:startDestination="@id/mainFragment">
+
+    <fragment android:id="@+id/mainFragment" android:name="com.samoana.minimalistyoutube.ui.main.HomeFragment"
+              android:label="main_fragment" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_mainFragment_to_searchResultsFragment"
+                app:destination="@id/searchResultsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/searchResultsFragment" android:name="com.samoana.minimalistyoutube.ui.main.SearchResultsFragment"
+              android:label="fragment_search_results" tools:layout="@layout/fragment_search_results">
+        <action android:id="@+id/action_searchResultsFragment_to_videoPlayerFragment"
+                app:destination="@id/videoPlayerFragment"/>
+    </fragment>
+    <activity android:id="@+id/videoPlayerFragment"
+              android:name="com.samoana.minimalistyoutube.ui.main.VideoPlayerActivity"
+              android:label="VideoPlayerFragment"/>
+</navigation>
